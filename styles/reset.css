@@ -1,0 +1,37 @@
+/* Сбрасываем стандартные отступы и границы у всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Убираем стандартный список у ul и ol */
+ul, ol {
+    list-style: none;
+}
+
+/* Убираем стандартное оформление ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем стандартные стили заголовков и параграфов */
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+}
+
+/* Делаем изображения адаптивными */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Улучшаем рендеринг шрифтов */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}

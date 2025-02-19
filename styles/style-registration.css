@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2'),
+    url('../fonts/CeraPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2'),
+    url('../fonts/CeraPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.form {
+    border-collapse: collapse;
+    width: 500px; /* Ширина ячейки */
+    height: 700px; /* Высота ячейки */
+    background-color: #ffffff; /* Цвет фона */
+    border: 1px solid #85858c; /* Цвет рамки */
+}
+
+.registration-form {
+    margin-left: 172px;
+    margin-top: 52px;
+    width: 157px;
+    height: 16px;
+    font-family: 'Cera Pro', sans-serif;
+}
+
+.Login {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(61, 61, 61, 1);
+    line-height: 16px;
+}
+
+.I {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 250;
+    text-align: left;
+    color: rgba(61, 61, 61, 1);
+    line-height: 16px;
+}
+
+.Register {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(70, 163, 88, 1);
+    line-height: 16px;
+}
+
+.Login,
+.I,
+.Register {
+    margin: 0 2px;
+}
+
+.enter-your-email-text {
+    width: 300px;
+    height: 16px;
+    margin-top: 56px;
+    margin-left: 100px;
+}
+
+.email-text {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: rgba(61, 61, 61, 1);
+}
+
+.inputs-registration {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.username, .email, .password {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 16px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(165, 165, 165, 1);
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.confirm-password {
+    width: 300px;
+    height: 40px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(165, 165, 165, 1);
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.button {
+    margin-top: 41px;
+    margin-left: 100px;
+}
+
+.submit {
+    width: 300px;
+    height: 45px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(70, 163, 88, 1);
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 41px;
+    cursor: pointer;
+}
+
+.or-register-with {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 36px;
+}
+
+.or-register-with-text {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 13px; /* Размер текста */
+    line-height: 16px;
+    color: rgba(61, 61, 61, 1);
+    white-space: nowrap;
+    margin-left: 6px;
+    margin-right: 7px;
+}
+
+.line {
+    width: 97px;
+    height: 1px;
+    background-color: rgba(234, 234, 234, 1);
+}
+
+.line2 {
+    width: 95px;
+    height: 1px;
+    background-color: rgba(234, 234, 234, 1);
+}
+
+.social-media-login {
+    margin-top: 27px;
+    margin-left: 100px;
+}
+
+.login-with-google-btn,
+.login-with-facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    border: 1px solid rgba(165, 165, 165, 1);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 13px;
+    color: rgba(114, 114, 114, 1);
+    text-decoration-line: blink;
+}
+
+.login-with-google-btn {
+    margin-bottom: 15px;
+    gap: 7px;
+}
+
+.login-with-google-btn {
+    gap: 5px;
+}
+
+.line-footer {
+    width: 100%;
+    height: 10px;
+    margin-top: 40px;
+    background-color: rgba(70, 163, 88, 1);
+}
