@@ -35,3 +35,10 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+/* Сбрасываем вертикальное выравнивание */
+.pagination a {
+    vertical-align: middle; /* Убирает разницу в высоте */
+    text-align: center;
+    line-height: normal; /* Делаем line-height естественным */
+}

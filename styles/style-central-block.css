@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2'),
+    url('../fonts/CeraPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2'),
+    url('../fonts/CeraPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanged Letters';
+    src: url('../fonts/Hanged-Letters.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Главный контейнер */
+.products-section .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px; /* Отступ между сайдбаром и контентом */
+}
+
+/* Левая колонка (sidebar + баннер) */
+.sidebar-container {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-top: 26px;
+    width: 100%;
+    height: 774px;
+    background-color: #FBFBFB;
+    padding: 14px 18px;
+    font-family: 'Cera Pro', sans-serif;
+}
+
+/* Заголовок "Categories" */
+.sidebar h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+}
+
+/* Список категорий */
+.categories {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.categories li a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #3D3D3D;
+    transition: color 0.3s ease;
+}
+
+.categories li a.active {
+    font-weight: 700;
+    color: #46A358;
+}
+
+/* Баннер "Super Sale" */
+.sale-banner {
+    width: 310px;
+    height: 470px;
+    background: linear-gradient(180deg, rgba(70, 163, 88, 0.1) 10%, rgba(70, 163, 88, 0.03) 90%);
+    text-align: center;
+    font-family: 'Cera Pro', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.sale-title {
+    margin-top: 16px;
+    font-size: 65px;
+    font-weight: 400;
+    color: #46A358;
+    line-height: 65px;
+    font-family: 'Hanged Letters', sans-serif;
+}
+
+.sale-subtitle {
+    margin-top: 11px;
+    font-size: 23px;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.sale-image {
+    width: 310px;
+    height: 340px;
+    object-fit: cover;
+}
+
+/* Декоративные круги */
+.sale-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(70, 163, 88, 0.3) 0%, rgba(70, 163, 88, 0) 100%);
+    z-index: 1;
+}
+
+.small-circle {
+    width: 15px;
+    height: 15px;
+    top: 130px;
+    left: 50px;
+}
+
+.medium-circle {
+    width: 22px;
+    height: 22px;
+    top: 300px;
+    left: 20px;
+}
+
+.large-circle {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 30px;
+}
+
+/* Правая колонка (контент с товарами) */
+.products-content {
+    flex-grow: 1; /* Занимает всё доступное место */
+}
+
+/* Блок сортировки */
+.sort-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 26px;
+}
+
+/* Табы */
+.filter-tabs {
+    display: flex;
+    gap: 40px;
+}
+
+.filter-tabs span {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3D3D3D;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-tabs span.active {
+    font-weight: 700;
+    color: #46A358;
+}
+
+.filter-tabs span.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #46A358;
+}
+
+/* Блок "Sort by" */
+.sort-by {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-by label {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3D3D3D;
+}
+
+.sort-by select {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3D3D3D;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Контейнер карточек товаров */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 32px; /* 70px по вертикали, 32px по горизонтали */
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Карточка товара */
+.product-card {
+    width: 258px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Контейнер с фоном */
+.product-card-bg {
+    width: 258px;
+    height: 300px;
+    background-color: rgba(251, 251, 251, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Изображение товара */
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Название товара */
+.product-card h3 {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(61, 61, 61, 1);
+    margin-top: 12px;
+    align-self: flex-start; /* Прижимает к левому краю */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+/* Цена товара */
+.product-card .price {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(70, 163, 88, 1);
+    margin-top: 6px;
+    align-self: flex-start; /* Прижимает к левому краю */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+/* Стили для блока пагинации */
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* Прибиваем к правому краю */
+    align-items: center;
+    gap: 10px; /* Расстояние между страницами 10px */
+    margin-top: 90px; /* Отступ сверху от карточек товара */
+    margin-bottom: 50px;
+}
+
+/* Стили для кнопок пагинации */
+.pagination a {
+    display: flex;
+    align-items: center; /* Выровнять текст строго по центру */
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    text-decoration: none;
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(61, 61, 61, 1);
+    border-radius: 4px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Активная страница */
+.pagination a.active {
+    font-weight: 700;
+    background-color: rgba(70, 163, 88, 1);
+    color: white;
+    border: none;
+}
+
+/* Эффект при наведении */
+.pagination a:hover {
+    background-color: rgba(70, 163, 88, 0.2);
+}
+
+/* Стили для кнопки "вперед" */
+.pagination a.next {
+    font-size: 22px; /* Чуть крупнее для визуального акцента */
+    font-weight: 700;
+    background-color: white;
+    color: rgba(61, 61, 61, 1);
+    border: 1px solid rgba(220, 220, 220, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Эффект при наведении на "вперед" */
+.pagination a.next:hover {
+    background-color: rgba(70, 163, 88, 0.2);
+}

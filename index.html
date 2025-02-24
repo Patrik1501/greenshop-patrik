@@ -6,6 +6,8 @@
     <title>GreenShop</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style-central-block.css">
+    
 </head>
 <body>
 <header>
@@ -45,5 +47,150 @@
         </div>
     </div>
 </div>
+
+<section class="products-section">
+    <div class="container">
+        
+        <!-- Левая колонка (боковое меню) -->
+        <div class="sidebar-container">
+            <aside class="sidebar">
+                <h2>Categories</h2>
+                <ul class="categories">
+                    <li><a href="#" class="active">House Plants</a></li>
+                    <li><a href="#">Potter Plants</a></li>
+                    <li><a href="#">Seeds</a></li>
+                    <li><a href="#">Small Plants</a></li>
+                    <li><a href="#">Big Plants</a></li>
+                    <li><a href="#">Succulents</a></li>
+                    <li><a href="#">Terrariums</a></li>
+                    <li><a href="#">Gardening</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </aside>
+            
+            <div class="sale-banner">
+                <h2 class="sale-title">Super Sale</h2>
+                <p class="sale-subtitle">UP TO 75% OFF</p>
+                
+                <!-- Блок с кругами -->
+                <div class="sale-circles">
+                    <div class="circle small-circle"></div>
+                    <div class="circle medium-circle"></div>
+                    <div class="circle large-circle"></div>
+                </div>
+                
+                <!-- Картинка баннера -->
+                <img src="./images/sale-banner.png" alt="Super Sale Plant" class="sale-image">
+            </div>
+        </div>
+        
+        <!-- Правая колонка (контент с товарами) -->
+        <div class="products-content">
+            
+            <!-- Блок сортировки -->
+            <div class="sort-filter">
+                <div class="filter-tabs">
+                    <span class="active">All Plants</span>
+                    <span>New Arrivals</span>
+                    <span>Sale</span>
+                </div>
+                <div class="sort-by">
+                    <label for="sort">Short by:</label>
+                    <select id="sort">
+                        <option>Default sorting</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Карточки товаров -->
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product1.png" alt="Barberton Daisy">
+                    </div>
+                    <h3>Barberton Daisy</h3>
+                    <p class="price">$119.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product2.png" alt="Angel Wing Begonia">
+                    </div>
+                    <h3>Angel Wing Begonia</h3>
+                    <p class="price">$169.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product3.png" alt="African Violet">
+                    </div>
+                    <h3>African Violet</h3>
+                    <p class="price">$199.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product4.png" alt="Beach Spider Lily">
+                    </div>
+                    <h3>Beach Spider Lily</h3>
+                    <p class="price">$129.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product5.png" alt="Blushing Bromeliad">
+                    </div>
+                    <h3>Blushing Bromeliad</h3>
+                    <p class="price">$139.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product6.png" alt="Aluminum Plant">
+                    </div>
+                    <h3>Aluminum Plant</h3>
+                    <p class="price">$179.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product7.png" alt="Bird’s Nest Fern">
+                    </div>
+                    <h3>Bird’s Nest Fern</h3>
+                    <p class="price">$99.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product8.png" alt="Broadleaf Lady Palm">
+                    </div>
+                    <h3>Broadleaf Lady Palm</h3>
+                    <p class="price">$59.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-card-bg">
+                        <img src="./images/product9.png" alt="Chinese Evergreen">
+                    </div>
+                    <h3>Chinese Evergreen</h3>
+                    <p class="price">$39.00</p>
+                </div>
+            </div>
+            
+            <!-- Пагинация -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="next">&gt;</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
