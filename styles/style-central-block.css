@@ -332,3 +332,200 @@
 .pagination a.next:hover {
     background-color: rgba(70, 163, 88, 0.2);
 }
+
+/* Promo section */
+.promo-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 1440px; /* Отступ вниз после пагинации */
+}
+
+.promo-container {
+    display: flex;
+    gap: 28px;
+    width: 1200px;
+}
+
+.promo-card {
+    display: flex;
+    align-items: center;
+    width: 586px;
+    height: 250px;
+    background-color: #FBFBFB;
+    /*padding: 20px;*/
+    position: relative; /* Для позиционирования текста */
+}
+
+.promo-image {
+    width: 287px;
+    height: 292px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    z-index: 1; /* Чтобы изображение было выше фона */
+}
+
+.promo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    align-items: flex-end;
+    position: absolute;
+    right: 30px; /* Пододвигаем текст вправо */
+    z-index: 2;
+    background-color: rgba(251, 251, 251, 0.7); /* Полупрозрачный фон, если нужно */
+    padding-bottom: 17px;
+    max-width: 300px;
+}
+
+.promo-title {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #3D3D3D;
+    width: 150px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Прижимает текст к правому краю */
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.promo-text {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #727272;
+    margin-bottom: 25px;
+    max-width: 292px;
+}
+
+.promo-button {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: #46A358;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+}
+
+.promo-button:hover {
+    background-color: #3A8C4D;
+}
+
+/* Blog Section */
+.blog-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+}
+
+.blog-section .container {
+    width: 1202px;
+    text-align: center;
+}
+
+/* Заголовок */
+.blog-title {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 16px;
+}
+
+/* Подзаголовок */
+.blog-subtitle {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #727272;
+    margin-bottom: 36px;
+}
+
+/* Контейнер с карточками */
+.blog-posts {
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+/* Карточка блога */
+.blog-card {
+    width: 268px;
+    height: 378px;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Изображение */
+.blog-card img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+}
+
+/* Контент карточки */
+.blog-content {
+    padding: 8px 11px 12px 14px;
+    text-align: left;
+}
+
+/* дата и время */
+.blog-meta {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #46A358;
+    margin-bottom: 4px;
+}
+
+/* Заголовок статьи */
+.blog-heading {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 4px;
+}
+
+/* Описание */
+.blog-text {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #727272;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+/* Кнопка "Read More" */
+.blog-read-more {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #3D3D3D;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Эффект наведения */
+.blog-read-more:hover {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #46A358;
+}
+
