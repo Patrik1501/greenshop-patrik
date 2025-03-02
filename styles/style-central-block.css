@@ -233,7 +233,55 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Зеленая полоска сверху */
+.product-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(70, 163, 88, 1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Иконки */
+.icons {
+    position: absolute;
+    top: 238px; /* Оставляем нужное смещение сверху */
+    left: 50%; /* Размещаем относительно центра */
+    transform: translateX(-50%); /* Смещаем обратно на половину ширины */
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    /* Добавляем фон и размеры */
+    background-color: white; /* Белый фон */
+    border-radius: 4px; /* Скругленные углы */
+    padding: 8px; /* Внутренний отступ, чтобы изображение было внутри */
+
+    /* Центрируем содержимое */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Показываем полосу и иконки при наведении */
+.product-card:hover .product-hover,
+.product-card:hover .icons {
+    opacity: 1;
 }
 
 /* Контейнер с фоном */
