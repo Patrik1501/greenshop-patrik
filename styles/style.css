@@ -24,86 +24,86 @@ body {
 .container {
     width: 1200px;
     height: 53px;
-    top: 30px;
     margin: 0 auto;
 }
 
 header {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     width: 1200px;
     margin: 30px auto 12px auto;
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
 }
 
-.logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.logo img {
-    width: 150px;
-    height: 34px;
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 53px;
 }
 
 nav {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto;
-    height: 45px;
-    margin: 0 240px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
-    display: inline-block;
+    display: flex;
     list-style: none;
-    width: auto;
-    height: 45px;
-    text-align: center;
-    line-height: 45px;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 25px;
+nav > ul > li {
+    margin: 0 20px;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #3D3D3D;
     font-weight: 400;
-    border-bottom: 3px solid transparent;
-}
-
-nav ul li a.active {
+    font-size: 16px;
     position: relative;
-    font-weight: 700;
-    color: #3D3D3D;
+    border-bottom: 3px solid transparent;
+    transition: font-weight 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a.active::after {
+/* Hover эффект */
+nav ul li a:hover {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* nav ul li a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -43px;
-    width: 100%;
+    top: 52px;
+    width: 0;
     height: 3px;
     background-color: #46A358;
+} */
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
+/* Кнопка Login */
 .login-btn {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
+    flex-shrink: 0;
 }
 
 .login-btn a {
-    display: inline-block;
     text-decoration: none;
 }
 
 .login-btn button {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* Расстояние между иконкой и текстом */
     width: 100px;
     height: 35px;
     background-color: #4CAF50;
@@ -115,30 +115,23 @@ nav ul li a.active::after {
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    padding-left: 12px;
     line-height: 35px;
     position: relative;
 }
 
-.login-btn button::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    background: url("../images/logout.png") no-repeat center;
-    background-size: contain;
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Стили для иконки */
+.login-icon {
+    width: 20px;
+    height: 20px;
 }
 
+
+/* Главный баннер */
 .hero {
     margin: 0 auto;
     text-align: center;
     width: 1200px;
     height: 450px;
-    top: 10px;
     background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
 }
 
@@ -151,19 +144,12 @@ nav ul li a.active::after {
 }
 
 .hero-text .subheading {
-    display: inline-block;
-    width: 205px;
-    height: 16px;
-    font-family: 'Cera Pro', sans-serif;
-    font-weight: 500;
     font-size: 14px;
+    font-weight: 500;
     line-height: 16px;
 }
 
 .hero-text h1 {
-    width: 590px;
-    height: 140px;
-    font-family: 'Cera Pro', sans-serif;
     font-weight: 900;
     font-size: 70px;
     line-height: 70px;
@@ -174,24 +160,19 @@ nav ul li a.active::after {
 }
 
 .hero-text .description {
-    width: 557px;
-    height: 45px;
     font-size: 14px;
     color: #727272;
-    font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
     line-height: 24px;
 }
 
+/* Кнопка SHOP NOW */
 .shop-btn {
-    top: 325px;
-    left: 41px;
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 15px 30px;
     cursor: pointer;
-    font-family: 'Cera Pro', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -223,4 +204,154 @@ nav ul li a.active::after {
     left: 160px;
     width: 135px;
     height: 135px;
+}
+
+/* Основное меню */
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 400;
+    padding: 46px 0;
+    display: inline-block;
+}
+
+/* Выпадающее меню (1 уровень) */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -70%;
+    background-color: #EDF6EE;
+    width: 188px;
+    padding: 0;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Обертка для подменю — создаем "мостик" */
+.submenu {
+    position: relative;
+
+}
+
+.submenu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 6px; /* невидимая зона для ховера */
+    height: 100%;
+    background: transparent;
+}
+
+/* Подменю (2 уровень) */
+.submenu-menu {
+    position: absolute;
+    top: -300%;
+    left: 100%;
+    min-width: 178px;
+    background-color: #EDF6EE;
+    margin-left: 2px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.submenu:hover .submenu-menu,
+.submenu-menu:hover {
+    display: block;
+}
+
+/* Стили пунктов меню */
+.dropdown-menu li a,
+.submenu-menu li a {
+    display: block;
+    width: 100%;
+    padding: 7px 14px 8px 14px; /* top right bottom left */
+    font-size: 16px;
+    font-weight: 400;
+    color: #3D3D3D;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+}
+
+/* При наведении — зелёный фон на всю ширину */
+.dropdown-menu li a:hover,
+.submenu-menu li a:hover {
+    background-color: #46A358;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Обёртка под SVG стрелку */
+.submenu > a {
+    position: relative;
+    padding-right: 28px; /* чтобы было место под стрелку */
+}
+
+/* Стрелка — по умолчанию вправо */
+.submenu > a .arrow {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 6px;
+    height: 10px;
+    background-image: url('../images/stroke_right.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    transition: background-image 0.3s ease;
+}
+
+/* При наведении — стрелка влево */
+.submenu:hover > a .arrow {
+    background-image: url('../images/stroke_left.svg');
+}
+
+.dropdown:hover > a {
+    font-weight: 700;
+}
+
+/* Базовый стиль пункта верхнего уровня */
+nav > ul > li > a {
+    position: relative;
+    font-weight: 400;
+    color: #3D3D3D;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Добавляем псевдоэлемент подчеркивания */
+nav > ul > li > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 3px;
+    background-color: #46A358;
+}
+
+/* Показываем зелёную линию только при наведении на пункт верхнего меню */
+nav > ul > li:hover > a::after {
+    width: 100%;
 }
