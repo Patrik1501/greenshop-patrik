@@ -1,0 +1,272 @@
+.footer {
+  font-family: 'Cera Pro', sans-serif;
+  color: #3D3D3D;
+}
+
+.footer-top {
+    width: 1200px;
+    height: 250px;
+    background-color: #FBFBFB;
+  padding: 24px 0;
+}
+
+.footer-top-content {
+  display: flex;
+  justify-content: space-between;
+    width: 1152px;
+    height: 201px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-box {
+  position: relative;
+  width: 204px;
+  padding-right: 10px; /* чтобы текст не прилипал к линии */
+}
+
+.footer-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -20px;
+  width: 1px;
+  height: 187px;
+  background-color: rgba(70, 163, 88, 0.1);
+}
+
+.footer-box img {
+  height: 93px;
+  margin-bottom: 14px;
+  margin-left: 16px;
+}
+
+.footer-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
+  line-height: 24px;
+}
+
+.newsletter {
+  width: 354px;
+  padding: 14px 0 0 0;
+}
+
+.newsletter-form {
+  display: flex;
+  height: 40px;
+  margin: 25px 0 18px 0;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(70, 163, 88, 0.1);
+  font-size: 14px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.newsletter-form button {
+  background-color: #46A358;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  width: 85px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+}
+
+.footer-middle {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 88px;
+  background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
+  padding: 25px 24px;
+}
+
+.footer-middle-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  color: #3D3D3D;
+}
+
+.footer-middle-content .contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 34px;
+}
+
+.footer-bottom {
+  background-color: #FBFBFB;
+  padding: 33px 25px;
+  height: 236px;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.2);
+}
+
+.footer-bottom-content {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  height: 174px;
+}
+
+.footer-column {
+  width: auto;
+}
+
+.footer-column:nth-child(1) {
+  margin-right: 176px;
+}
+
+.footer-column:nth-child(2) {
+  margin-right: 136px;
+}
+
+.footer-column:nth-child(3) {
+  margin-right: 184px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #3D3D3D;
+  font-size: 14px;
+}
+
+.social-icons,
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 33px;
+}
+
+.social-icons img  {
+  width: 30px;
+  height: 30px;
+}
+
+.payment-icons img {
+  width: 224px;
+  height: 26px;
+  margin-top: 5px;
+}
+
+.footer-bottom .copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #3D3D3D;
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+
+ .footer {
+     margin-top: 548px; /* 100px ранее + 448px дополнительно */
+     width: 1200px;
+     height: 610px;
+     margin-left: auto;
+     margin-right: auto;
+     display: flex;
+     flex-direction: column;
+
+
+ }
+
+/* Общий блок для Watering Garden */
+.watering-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Контейнер для двух изображений */
+.watering-icons {
+  position: relative;
+  width: 83px;
+  height: 93px;
+  margin-bottom: 14px;
+}
+
+/* Верхнее растение */
+.watering-leaf {
+  position: relative;
+  top: -17px;
+  left: 13px;
+  width: 44px;
+  z-index: 2;
+}
+
+/* Лейка снизу */
+.watering-pot {
+  position: relative;
+  bottom: 82px;
+  left: -11px;
+  width: 83px;
+  z-index: 3;
+}
+
+.icon-circle-wrapper {
+  position: relative;
+  width: 93px;
+  height: 93px;
+  margin-bottom: 14px;
+}
+
+.icon-circle {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: rgba(70, 163, 88, 0.13);
+  z-index: 0;
+}
+
+/* Убедись, что картинки поверх круга */
+.icon-circle-wrapper img,
+.watering-icons {
+  position: relative;
+  z-index: 1;
+}
