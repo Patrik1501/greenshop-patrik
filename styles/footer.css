@@ -1,20 +1,27 @@
 .footer {
   font-family: 'Cera Pro', sans-serif;
   color: #3D3D3D;
+  margin-top: 548px;
+  width: 1200px;
+  height: 610px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-top {
-    width: 1200px;
-    height: 250px;
-    background-color: #FBFBFB;
+  width: 1200px;
+  height: 250px;
+  background-color: #FBFBFB;
   padding: 24px 0;
 }
 
 .footer-top-content {
   display: flex;
   justify-content: space-between;
-    width: 1152px;
-    height: 201px;
+  width: 1152px;
+  height: 201px;
   margin: 0 auto;
   gap: 20px;
 }
@@ -22,7 +29,7 @@
 .footer-box {
   position: relative;
   width: 204px;
-  padding-right: 10px; /* чтобы текст не прилипал к линии */
+  padding-right: 10px;
 }
 
 .footer-box:not(:last-child)::after {
@@ -35,10 +42,12 @@
   background-color: rgba(70, 163, 88, 0.1);
 }
 
-.footer-box img {
+.footer-box svg.icon {
   height: 93px;
+  width: auto;
   margin-bottom: 14px;
   margin-left: 16px;
+  fill: #46A358;
 }
 
 .footer-box h4 {
@@ -63,9 +72,7 @@
   display: flex;
   height: 40px;
   margin: 25px 0 18px 0;
-
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
-
 }
 
 .newsletter-form input[type="email"] {
@@ -90,14 +97,13 @@
   width: 85px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-
 }
 
 .footer-middle {
-    display: flex;
-    align-items: center;
-    width: 1200px;
-    height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
   padding: 25px 24px;
 }
@@ -107,19 +113,50 @@
   align-items: center;
   justify-content: space-between;
   width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   color: #3D3D3D;
 }
 
-.footer-middle-content .contact-item {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  gap: 10px;
-}
-
 .footer-logo {
   height: 34px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #3D3D3D;
+  transition: color 0.3s ease;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.contact-item svg.icon {
+  width: 20px;
+  height: 20px;
+  color: #46A358;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Hover-эффект */
+.contact-item:hover {
+  color: #007BFF;
+}
+
+.contact-item:hover svg.icon {
+  color: #007BFF;
+}
+
+.contact-item:hover a {
+  color: #007BFF;
 }
 
 .footer-bottom {
@@ -181,10 +218,20 @@
   margin-bottom: 33px;
 }
 
-.social-icons img  {
+
+.social-icons svg.icon {
   width: 30px;
   height: 30px;
+  color: #46A358; /* работает с currentColor */
+  transition: color 0.3s ease; /* <-- исправлено: color, а не fill */
+  aspect-ratio: 1 / 1;
+  overflow: visible;
 }
+
+.social-icons a:hover .icon {
+  color: #007BFF;
+}
+
 
 .payment-icons img {
   width: 224px;
@@ -200,19 +247,7 @@
   padding-bottom: 40px;
 }
 
- .footer {
-     margin-top: 548px; /* 100px ранее + 448px дополнительно */
-     width: 1200px;
-     height: 610px;
-     margin-left: auto;
-     margin-right: auto;
-     display: flex;
-     flex-direction: column;
-
-
- }
-
-/* Общий блок для Watering Garden */
+/* Watering Garden */
 .watering-box {
   display: flex;
   flex-direction: column;
@@ -220,7 +255,6 @@
   text-align: left;
 }
 
-/* Контейнер для двух изображений */
 .watering-icons {
   position: relative;
   width: 83px;
@@ -228,22 +262,24 @@
   margin-bottom: 14px;
 }
 
-/* Верхнее растение */
 .watering-leaf {
   position: relative;
   top: -17px;
   left: 13px;
   width: 44px;
+  height: auto;
   z-index: 2;
+  fill: #46A358;
 }
 
-/* Лейка снизу */
 .watering-pot {
   position: relative;
   bottom: 82px;
   left: -11px;
   width: 83px;
+  height: auto;
   z-index: 3;
+  fill: #46A358;
 }
 
 .icon-circle-wrapper {
@@ -264,8 +300,7 @@
   z-index: 0;
 }
 
-/* Убедись, что картинки поверх круга */
-.icon-circle-wrapper img,
+.icon-circle-wrapper svg.icon,
 .watering-icons {
   position: relative;
   z-index: 1;
